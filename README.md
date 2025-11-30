@@ -51,16 +51,16 @@ For each step K, we generate a specific CNF formula using the following constrai
 
 If two vertices u and v are not connected by an edge in the input graph, they can not both be in the clique.
 
-Variable {i,j} is true if and only if the count reaches j after seeing vertex i.
+Variable S_{i,j} is true if and only if the count reaches j after seeing vertex i.
 
-We make sure that the final counter variable {N, K} must be TRUE.
+We make sure that the final counter variable S_{N, K} must be TRUE.
 
-
-
+ 
+ 
 **User documentation**
+ 
 
-
-
+ 
 Basic usage:
 
 python3 max_clique.py [-h] [-i INPUT] [-o OUTPUT] [-s SOLVER] [-v {0,1}]
@@ -79,25 +79,25 @@ Command-line options:
 
 -v {0,1}, --verb {0,1} : Verbosity of the SAT solver output.
 
-
+ 
 
 **Example instances**
 
-
+ 
 triangle.clq: A graph with 3 vertices and 3 edges
 
 square.clq: A graph with 4 vertices and 4 edges
 
-
+ 
 **Experiments**
-
+ 
 
 Experiments were run on a MacBook Air M3.
-
+ 
 
 Instance: triangle.clq
 
-
+ 
 Clique Size (K) ************************ Time (s) ********************* Result
 
 1 *************************************** 0.001 ************************ SAT
