@@ -1,0 +1,7 @@
+I could not find an instance which takes at least 10 seconds to run, 
+but to find one, tried to create a graph generator and give the 
+number of vertices and density, so it can create graphs and
+we can check their running time on glucose. We could start with 
+100 vertices and 0.75 density,and if glucose solves it under
+10 seconds, we can increase the density and the number of vertices, 
+eventually finding a graph running longer than 10 seconds.
