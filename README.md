@@ -44,8 +44,8 @@ So, we use an iterative way:
 
    * If SAT: Store the result and try K = K + 1
 
-   * If UNSAT: The largest successful K is the maximum size.
-   * 
+   * If UNSAT: The largest successful K is the maximum size
+     
 
 For each step K, we generate a specific CNF formula using the following constraints:
 
