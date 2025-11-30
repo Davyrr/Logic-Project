@@ -45,11 +45,11 @@ def get_counter_id(i, j, partial_sum_vars):
     if j > i: 
         return "FALSE"
     
-    # if variable does not exist, create new ID
-    # calculate ID depending on how many variables created using NUM_VERTICES
+    # if variable does not exist, create new number
+    # calculate number depending on how many variables created using NUM_VERTICES
     if (i, j) not in partial_sum_vars:
-        new_id = NUM_VERTICES + len(partial_sum_vars) + 1
-        partial_sum_vars[(i, j)] = new_id
+        new_num = NUM_VERTICES + len(partial_sum_vars) + 1
+        partial_sum_vars[(i, j)] = new_num
     
     return partial_sum_vars[(i, j)]
 
@@ -64,7 +64,7 @@ def encode(instance, clique_size):
     
     # iterate over pair of distinct vertices
     # if a pair does not have an edge connecting them in the graph, it is not possible to select them for the clique
-    # add a clause (NOT u) or (NOT) v, which means at least one must be excluded
+    # add a clause (NOT u) or (NOT) v
     for u in range(1, NUM_VERTICES + 1):
         for v in range(u + 1, NUM_VERTICES + 1):
             if tuple(sorted((u, v))) not in EDGES:
@@ -124,7 +124,7 @@ def encode(instance, clique_size):
                 cnf.append(clause2)
 
     # among the first N vertices, the count must be at least 'clique_size'
-    # add a clause containing this variable, force it to be True.
+    # add a clause containing this variable, make it True.
     final_var = get_counter_id(NUM_VERTICES, clique_size, partial_sum_vars)
     if isinstance(final_var, int):
         cnf.append([final_var, 0])
@@ -147,7 +147,7 @@ def call_solver(cnf, nr_vars, output_name, solver_name, verbosity):
         for clause in cnf:
             file.write(' '.join(str(lit) for lit in clause) + '\n')
     
-    # run the SAT solver as a subprocess with -model to get variables
+    # run the SAT solver as a subprocess to get variables
     return subprocess.run([solver_name, '-model', output_name], stdout=subprocess.PIPE, text=True)
 
 def print_result(result, verbosity):
