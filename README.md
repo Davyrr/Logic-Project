@@ -11,7 +11,7 @@ The Maximum Clique problem challenges the user to find the largest subset of ver
 
 An example of a valid input format is:
 
-'''text
+```text
 c graph with 3 vertices, 3 edges
 
 c maximum clique is 3
@@ -23,7 +23,7 @@ e 1 2
 e 2 3
 
 e 1 3
-'''
+```
 
 
 Where lines starting with c are comments. The line starting with p defines the number of vertices, and the number of edges. Lines starting with e define an edge between vertex u and vertex v.
