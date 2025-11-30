@@ -80,15 +80,15 @@ Command-line options:
 
  
 
-**Example instances**
+# *Example instances*
 
  
-triangle.clq: A graph with 3 vertices and 3 edges
+* `triangle.clq`: A graph with 3 vertices and 3 edges
 
-square.clq: A graph with 4 vertices and 4 edges
+* `square.clq`: A graph with 4 vertices and 4 edges
 
  
-**Experiments**
+# *Experiments*
  
 
 Experiments were run on a MacBook Air M3.
