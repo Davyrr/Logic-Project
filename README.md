@@ -56,7 +56,9 @@ Variable {i,j} is true if and only if the count reaches j after seeing vertex i.
 We make sure that the final counter variable {N, K} must be TRUE.
 
 
+
 **User documentation**
+
 
 
 Basic usage:
