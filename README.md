@@ -13,10 +13,15 @@ An example of a valid input format is:
 
 
 **c graph with 3 vertices, 3 edges
+
 c maximum clique is 3
+
 p edge 3 3
+
 e 1 2
+
 e 2 3
+
 e 1 3**
 
 
