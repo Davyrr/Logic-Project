@@ -1,17 +1,17 @@
-**Maximum Clique Solver**
+#*Maximum Clique Solver*
 
 This is a solution for the Maximum Clique problem. The provided Python code encodes, solves, and decodes the problem via reduction to SAT.
 
 The SAT solver used by default is Glucose. The Python script calls the solver as a subprocess.
 
 
-**Problem Description**
+#*Problem Description*
 
 The Maximum Clique problem challenges the user to find the largest subset of vertices in a graph such that every two distinct vertices in the clique are adjacent. Formally, for a graph G=(V, E), a clique is a subset C of V such that for every u, v in C, if u is not equal to v, then (u, v) is in E.
 
 An example of a valid input format is:
 
-
+'''text
 c graph with 3 vertices, 3 edges
 
 c maximum clique is 3
@@ -23,13 +23,13 @@ e 1 2
 e 2 3
 
 e 1 3
-
+'''
 
 
 Where lines starting with c are comments. The line starting with p defines the number of vertices, and the number of edges. Lines starting with e define an edge between vertex u and vertex v.
 
 
-**Encoding**
+#*Encoding*
 
 
 To find the Maximum Clique, the code solves a sequence of decision problems. SAT solver answer Yes or No to a specific formula, so we cannot ask for the maximum.
