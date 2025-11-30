@@ -1,6 +1,6 @@
-c Graph: pentagon
-c Maximum Clique Size: 2
-c clique for Size 3 will be UNSATISFIABLE
+c graph is a pentagon
+c maximum clique is 2
+c clique for size 3 will be UNSATISFIABLE
 p edge 5 5
 e 1 2
 e 2 3
