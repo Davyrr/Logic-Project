@@ -1,11 +1,11 @@
-#*Maximum Clique Solver*
+# *Maximum Clique Solver*
 
 This is a solution for the Maximum Clique problem. The provided Python code encodes, solves, and decodes the problem via reduction to SAT.
 
 The SAT solver used by default is Glucose. The Python script calls the solver as a subprocess.
 
 
-#*Problem Description*
+## *Problem Description*
 
 The Maximum Clique problem challenges the user to find the largest subset of vertices in a graph such that every two distinct vertices in the clique are adjacent. Formally, for a graph G=(V, E), a clique is a subset C of V such that for every u, v in C, if u is not equal to v, then (u, v) is in E.
 
@@ -29,7 +29,7 @@ e 1 3
 Where lines starting with c are comments. The line starting with p defines the number of vertices, and the number of edges. Lines starting with e define an edge between vertex u and vertex v.
 
 
-#*Encoding*
+## *Encoding*
 
 
 To find the Maximum Clique, the code solves a sequence of decision problems. SAT solver answer Yes or No to a specific formula, so we cannot ask for the maximum.
@@ -61,23 +61,22 @@ We make sure that the final counter variable S_{N, K} must be TRUE.
  
 
  
-Basic usage:
-
-python3 max_clique.py [-h] [-i INPUT] [-o OUTPUT] [-s SOLVER] [-v {0,1}]
+## User documentation
 
 
+Basic usage: 
+```
+maxClique.py [-h] [-i INPUT] [-o OUTPUT] [-s SOLVER] [-v {0,1}]
+```
 
 Command-line options:
 
--h, --help : Show a help message and exit.
+* `-h`, `--help` : Show a help message and exit.
+* `-i INPUT`, `--input INPUT` : The instance file. Default: "input.in".
+* `-o OUTPUT`, `--output OUTPUT` : Output file for the DIMACS format (i.e. the CNF formula).
+* `-s SOLVER`, `--solver SOLVER` : The SAT solver to be used.
+*  `-v {0,1}`, `--verb {0,1}` :  Verbosity of the SAT solver used.
 
--i INPUT, --input INPUT : The instance file in DIMACS format (Required).
-
--o OUTPUT, --output OUTPUT : Output file for the generated CNF formula. Default: formula.cnf.
-
--s SOLVER, --solver SOLVER : The path to the SAT solver executable. Default: glucose.
-
--v {0,1}, --verb {0,1} : Verbosity of the SAT solver output.
 
  
 
