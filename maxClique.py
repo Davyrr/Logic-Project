@@ -215,7 +215,7 @@ if __name__ == "__main__":
         default="formula.cnf",
         type=str,
         help=(
-            "Output file."
+            "Output file for the DIMACS format (i.e. the CNF formula)."
         ),
     )
 
@@ -225,7 +225,7 @@ if __name__ == "__main__":
         default="glucose",
         type=str,
         help=(
-            "Solver path."
+            "The SAT solver to be used."
         ),
     )
 
@@ -236,7 +236,7 @@ if __name__ == "__main__":
         type=int, 
         choices=range(0,2), 
         help=(
-            "Verbosity."
+            "Verbosity of the SAT solver used."
         ),
     )
     
